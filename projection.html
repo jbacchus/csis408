@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Missionary App</title>
+  <link rel="stylesheet" href="css/jquery.mobile-1.3.1.min.css">
+  <link rel="stylesheet" href="css/style.css"></script>
+  <script src="scripts/jquery-1.8.3.min.js"></script>
+  <script src="scripts/chromeFileProtocolFix.js"></script>
+  <script src="scripts/jquery.mobile-1.3.1.min.js"></script>
+  <script src="scripts/missionApp.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  <div data-role="page">
+    <div data-role="navbar">
+      <ul>
+		<li><a href="index.html">My Details</a></li>
+		<li><a href="projection.html" class="ui-btn-active ui-state-persist">Mission Trip Projection</a></li>
+        <li><a href="missionary.html">Missionary</a></li>
+      </ul>
+    </div> <!-- end navbar -->
+	
+	
+	
+    <div data-role="content" class="content">
+      <label for="people">Number of People:</label>
+      <input type='range' name='people' id='people' min='1' max='20' placeholder="1-20">
+      
+	  <label for="duration">Days of Trip:</label>
+      <input type='number' name='duration' id='duration' min='1'max='10' placeholder="1-10">
+	  
+	  <fieldset>
+		<legend>Location of Trip: </legend>
+		<input type="radio" name="locate" id="Kansas" value="Kansas" onClick="choose('Kansas')">
+			<label for="Kansas">Kansas</label>
+		<input type="radio" name="locate" id="Missouri" value="Missouri" onClick="choose('Missouri')">
+			<label for="Missouri">Missouri</label>
+		<input type="radio" name="locate" id="Oklahoma" value="Oklahoma" onClick="choose('Oklahoma')">
+			<label for="Oklahoma">Oklahoma</label>
+	  </fieldset>
+		
+      
+	  <br>
+      
+	  <input type="button" onclick="display()" value="Calculate">
+      
+	  <br>
+      
+	  <table id="data">
+        <tr>
+          <td>Number of People Entered:</td>
+          <td id='peopleDisplay'>0</td>
+        </tr>
+        
+		<tr>
+          <td>Number of Days Entered:</td>
+          <td id='durationDisplay'>0</td>
+        </tr>
+		
+		<tr>
+          <td>Location of Trip Entered:</td>
+          <td id='locateDisplay'>0</td>
+        </tr>
+      </table>
+    </div><!-- end content -->
+    
+	<div data-role=footer class="footer">
+      <small>Missionary app</small>
+    </div>
+	
+	
+  </div>
+</body>
+
+</html>
